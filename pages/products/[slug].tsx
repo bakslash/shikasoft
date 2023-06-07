@@ -25,7 +25,7 @@ export default function Product({ product }) {
             </div>
             <p className="max-w-xl">{product.longDescription}</p>
           </div> */}
-        </div>
+        {/* </div> */}
       </div>
     </div>
   )
