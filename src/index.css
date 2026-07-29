@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-canvas-900 text-titanium font-sans antialiased;
+  }
+  ::selection {
+    @apply bg-white text-canvas-900;
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0B0F17;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2A3344;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4A5568;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Intersecting thin grid lines forming sharp diamond pattern */
+  .geo-grid {
+    background-image:
+      linear-gradient(60deg, rgba(74, 85, 104, 0.10) 1px, transparent 1px),
+      linear-gradient(-60deg, rgba(74, 85, 104, 0.10) 1px, transparent 1px),
+      linear-gradient(0deg, rgba(74, 85, 104, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(74, 85, 104, 0.06) 1px, transparent 1px);
+    background-size: 48px 48px, 48px 48px, 48px 48px, 48px 48px;
+  }
+
+  /* Fine diamond grid */
+  .geo-grid-fine {
+    background-image:
+      linear-gradient(45deg, rgba(74, 85, 104, 0.08) 1px, transparent 1px),
+      linear-gradient(-45deg, rgba(74, 85, 104, 0.08) 1px, transparent 1px);
+    background-size: 24px 24px, 24px 24px;
+  }
+
+  /* Orthogonal thin grid */
+  .ortho-grid {
+    background-image:
+      linear-gradient(to right, rgba(74, 85, 104, 0.07) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(74, 85, 104, 0.07) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  .radial-fade {
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 30%, transparent 100%);
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 30%, transparent 100%);
+  }
+
+  .radial-fade-top {
+    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 35%, transparent 100%);
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 35%, transparent 100%);
+  }
+
+  .glass-panel {
+    background: rgba(26, 32, 44, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .radial-spot {
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.06) 0%, transparent 60%);
+  }
+
+  .radial-spot-cyan {
+    background: radial-gradient(circle at center, rgba(163, 210, 219, 0.08) 0%, transparent 60%);
+  }
+}
