@@ -16,6 +16,7 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",
     "lucide-react": "^0.470.0",
+    "next": "^16.2.12",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -29,16 +30,19 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.11",
     "globals": "^15.9.0",
-    "postcss": "^8.4.35",
+    "postcss": "^8.5.20",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.3.0",
     "vite": "^8.1.5"
   },
   "allowScripts": {
-    "esbuild@0.25.12": true
+    "esbuild@0.25.12": true,
+    "sharp@0.34.5": true
   },
   "overrides": {
-    "esbuild": "^0.25.0"
+    "esbuild": "^0.25.0",
+    "postcss": "^8.5.20",
+    "sharp": "^0.35.3"
   }
 }
