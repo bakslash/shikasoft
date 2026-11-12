@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Menu, X, Phone, ChevronDown, Smartphone, Code2, Zap, BarChart3 } from 'lucide-react';
+import { Menu, X, Phone, ChevronDown, Smartphone, Code2, Zap, BarChart3, BrainCircuit } from 'lucide-react';
 
 const LINKS = [
   { label: 'Home', href: '#top' },
@@ -8,7 +8,6 @@ const LINKS = [
   { label: 'Contact', href: '#contact' },
 ];
 
-// Updated with descriptions and icons
 const SERVICES = [
   { 
     label: 'Web & Mobile Apps', 
@@ -21,6 +20,12 @@ const SERVICES = [
     desc: 'Tailor-made systems built to fit your business perfectly.',
     href: '#services',
     icon: Code2
+  },
+  { 
+    label: 'AI & AI Automation', 
+    desc: 'Smart agents and LLM integrations to automate complex work.',
+    href: '#services',
+    icon: BrainCircuit
   },
   { 
     label: 'Workflow Automation', 
@@ -87,7 +92,7 @@ export default function Navbar() {
 
             {/* Desktop Dropdown Menu */}
             {servicesOpen && (
-              <div className="absolute left-1/2 top-full w-[320px] -translate-x-1/2 pt-4">
+              <div className="absolute left-1/2 top-full w-[340px] -translate-x-1/2 pt-4">
                 <div className="overflow-hidden border border-line bg-white shadow-xl">
                   <div className="flex flex-col py-2">
                     {SERVICES.map((s) => {
