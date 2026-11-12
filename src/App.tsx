@@ -1,22 +1,21 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import Pillars from '@/components/Pillars';
-import Services from '@/components/Services';
-import Pipeline from '@/components/Pipeline';
+import Services from '@/components/OurWork';
+import CaseStudies from '@/components/CaseStudies';
 import About from '@/components/About';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
 function App() {
   return (
-    <div className="relative min-h-screen bg-void-950">
+    <div className="relative min-h-screen bg-canvas-900 text-titanium selection:bg-accent selection:text-white">
       <Navbar />
       <main>
         <Hero />
-        <Pillars />
-        <Services />
-        <Pipeline />
         <About />
+      
+        <CaseStudies />
+       
         <Contact />
       </main>
       <Footer />

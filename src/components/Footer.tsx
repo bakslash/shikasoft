@@ -1,80 +1,61 @@
-import { Instagram, Facebook, Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, Facebook } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-line bg-canvas-900">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-4">
+    <footer className="bg-dark text-white py-16">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="grid gap-12 md:grid-cols-4">
+          
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2.5">
-              <span className="flex h-8 w-8 items-center justify-center border border-line">
-                <span className="font-display text-base font-bold text-titanium">S</span>
+            <div className="flex items-center gap-2.5 mb-6">
+              <span className="flex h-8 w-8 items-center justify-center border border-white/20">
+                <span className="font-display text-base font-bold text-white">S</span>
               </span>
-              <span className="font-display text-base font-bold tracking-[0.2em] text-titanium">
+              <span className="font-display text-lg font-bold tracking-widest text-white">
                 SHIKA SOFT
               </span>
             </div>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-silver">
-              Shika Soft Solutions — elite IT engineering and SaaS solutions for startups,
-              mid-market, and modern enterprises seeking workflow automation, custom systems
-              integration, and comprehensive digital transformation.
+            <p className="max-w-sm text-sm leading-relaxed text-stone-400">
+              Elite IT engineering and SaaS solutions for startups, mid-market, and modern enterprises. We turn complex problems into beautiful, fast software.
             </p>
-            <div className="mt-6 flex gap-px border border-line bg-line">
-              {[
-                { Icon: Instagram, href: 'https://instagram.com/shika_soft/', label: 'Instagram' },
-                { Icon: Facebook, href: 'https://facebook.com/shika_soft/', label: 'Facebook' },
-              ].map(({ Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex h-9 w-9 items-center justify-center bg-canvas-900 text-silver transition-all duration-300 hover:bg-canvas-800 hover:text-titanium"
-                  aria-label={label}
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
+            <div className="mt-8 flex gap-4">
+              <a href="https://instagram.com/shika_soft/" target="_blank" rel="noreferrer" className="text-stone-400 hover:text-accent transition-colors">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a href="https://facebook.com/shika_soft/" target="_blank" rel="noreferrer" className="text-stone-400 hover:text-accent transition-colors">
+                <Facebook className="h-5 w-5" />
+              </a>
             </div>
           </div>
 
           <div>
-            <h4 className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-silver">
-              Practice
-            </h4>
-            <ul className="mt-4 space-y-2.5 text-sm text-silver">
-              <li><a href="#services" className="transition-colors hover:text-titanium">Data & Automation</a></li>
-              <li><a href="#services" className="transition-colors hover:text-titanium">Core Infrastructure</a></li>
-              <li><a href="#services" className="transition-colors hover:text-titanium">Transformation</a></li>
-              <li><a href="#services" className="transition-colors hover:text-titanium">Cyber Security</a></li>
+            <h4 className="font-bold text-white mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-sm text-stone-400">
+              <li><a href="#services" className="hover:text-accent transition-colors">Services</a></li>
+              <li><a href="#workflow" className="hover:text-accent transition-colors">Our Process</a></li>
+              <li><a href="#about" className="hover:text-accent transition-colors">About Us</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-silver">
-              Contact Node
-            </h4>
-            <ul className="mt-4 space-y-3 text-sm text-silver">
+            <h4 className="font-bold text-white mb-4">Contact</h4>
+            <ul className="space-y-3 text-sm text-stone-400">
               <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-silver/70" /> +254 706 143 819
+                <Phone className="h-4 w-4 text-accent" /> +254 706 143 819
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-silver/70" /> hello@shikasoft.co.ke
+                <Mail className="h-4 w-4 text-accent" /> 
+                <a href="mailto:hello@shikasoftsolutions.co.ke" className="hover:text-accent">hello@shikasoftsolutions.co.ke</a>
               </li>
               <li className="flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-silver/70" /> Nairobi · Remote-first
+                <MapPin className="h-4 w-4 text-accent" /> Nairobi, Kenya
               </li>
             </ul>
           </div>
         </div>
-
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-line pt-6 sm:flex-row">
-          <p className="font-mono text-xs text-silver/50">
-            © {new Date().getFullYear()} Shika Soft Solutions. All rights reserved.
-          </p>
-          <p className="font-mono text-xs text-silver/50">
-            Built for the enterprise · SYS_STATUS: ACTIVE
-          </p>
+        
+        <div className="mt-16 border-t border-white/10 pt-8 text-center text-xs text-stone-500">
+          © {new Date().getFullYear()} Shika Soft Solutions. All rights reserved.
         </div>
       </div>
     </footer>

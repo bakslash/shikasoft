@@ -11,20 +11,24 @@
   body {
     @apply bg-canvas-900 text-titanium font-sans antialiased;
   }
+  
+  /* Warm Orange Selection */
   ::selection {
-    @apply bg-white text-canvas-900;
+    background-color: #EA580C;
+    color: #FFFFFF;
   }
+  
   ::-webkit-scrollbar {
     width: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: #0B0F17;
+    background: #FAFAF9;
   }
   ::-webkit-scrollbar-thumb {
-    background: #2A3344;
+    background: #D6D3D1;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #4A5568;
+    background: #A8A29E;
   }
 }
 
@@ -33,29 +37,27 @@
     text-wrap: balance;
   }
 
-  /* Intersecting thin grid lines forming sharp diamond pattern */
+  /* Clean, subtle grid for light backgrounds */
   .geo-grid {
     background-image:
-      linear-gradient(60deg, rgba(74, 85, 104, 0.10) 1px, transparent 1px),
-      linear-gradient(-60deg, rgba(74, 85, 104, 0.10) 1px, transparent 1px),
-      linear-gradient(0deg, rgba(74, 85, 104, 0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(74, 85, 104, 0.06) 1px, transparent 1px);
+      linear-gradient(60deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+      linear-gradient(-60deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
     background-size: 48px 48px, 48px 48px, 48px 48px, 48px 48px;
   }
 
-  /* Fine diamond grid */
   .geo-grid-fine {
     background-image:
-      linear-gradient(45deg, rgba(74, 85, 104, 0.08) 1px, transparent 1px),
-      linear-gradient(-45deg, rgba(74, 85, 104, 0.08) 1px, transparent 1px);
+      linear-gradient(45deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+      linear-gradient(-45deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
     background-size: 24px 24px, 24px 24px;
   }
 
-  /* Orthogonal thin grid */
   .ortho-grid {
     background-image:
-      linear-gradient(to right, rgba(74, 85, 104, 0.07) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(74, 85, 104, 0.07) 1px, transparent 1px);
+      linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
     background-size: 64px 64px;
   }
 
@@ -70,16 +72,14 @@
   }
 
   .glass-panel {
-    background: rgba(26, 32, 44, 0.5);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
   }
 
+  /* Warm subtle glowing spots instead of neon cyan */
   .radial-spot {
-    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.06) 0%, transparent 60%);
-  }
-
-  .radial-spot-cyan {
-    background: radial-gradient(circle at center, rgba(163, 210, 219, 0.08) 0%, transparent 60%);
+    background: radial-gradient(circle at center, rgba(234, 88, 12, 0.05) 0%, transparent 60%);
   }
 }
